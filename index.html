@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkList</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <!-- burger -->
+    <div class="burger" onclick="toggleMenu()" id="burger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- header  -->
+    <!-- header -->
+    <section id="header" class="header">
+        <div class="logo" id="logo">WorkList</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="#" onclick="(closeMenu)">Home</a></li>
+              <li><a href="#" onclick="(closeMenu)">ListWork</a></li>
+              <li><a href="#" onclick="(closeMenu)">Paramètres</a></li>
+              <li><a href="#" onclick="(closeMenu)" id="signIn">Sign In</a></li>
+            </ul>
+          </nav>
+    </section>
+
+    <!-- HOME  -->
+    <!-- HOME  -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Organisez vos journées en toute simplicité</h2>
+            <p>Gérez vos tâches, suivez votre productivité et restez
+                motivé avec WorkList
+            </p>
+            <a href="#" class="btn" id="signIn">Commencez maintenant</a>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <div class="connection">
+        <div id="loginContainer">
+            <h2>Connexion</h2>
+            <input type="text" id="username" placeholder="Nom d'utilisateur">
+            <button onclick="login()" class="btn">Se connecter</button>
+        </div>
+    </div>
+
+    <!-- To-Do List -->
+    <div class="appk" id="appk">
+        <div id="todoApp" style="display: none;">
+            <h2>Bienvenue, <span id="user"></span></h2>
+            <input type="text" id="taskInput" placeholder="Ajouter une tâche...">
+            <button onclick="addTask()" class="btn">Ajouter</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <!-- Deconnexion -->
+    <div class="logout">
+        <button id="logoutBtn" class="btn">Déconnexion</button>
+    </div>
+    
+  </body>
+</html>
